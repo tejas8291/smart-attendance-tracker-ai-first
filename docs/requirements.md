@@ -52,6 +52,15 @@
 - APIs must require authentication token.
 - Sensitive data should not be stored in plain text.
 
+## Geo-QR Attendance
+
+- Each workplace/location will have a unique QR code.
+- User must scan QR code before check-in.
+- App will capture current latitude and longitude.
+- Backend will verify whether user is within 100 meters of the assigned QR location.
+- If user is outside the allowed radius, attendance will not be marked.
+- If internet is unavailable, scan and location data will be stored locally and synced later.
+
 ### Scalability
 
 - Backend should support multiple users and location updates.
